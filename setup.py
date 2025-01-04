@@ -227,7 +227,7 @@ def classy_extension_config(branch):
     config['extra_compile_args'] = []
     # important or get a symbol not found error, because class is
     # compiled with c++?
-    config['language'] = 'c'
+    config['language'] = 'c' if branch != 'class_ads' else 'c++'
     config['libraries'] = ['m']
 
     # determine if swig needs to be called
